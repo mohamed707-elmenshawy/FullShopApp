@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:store_app/asroo_store_app.dart';
+import 'package:store_app/core/app/env.variables.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,6 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp();
+    return MaterialApp(
+      debugShowCheckedModeBanner: EnvVariable.myinstance.debugMode,
+      home: const AsrooStoreApp(),
+    );
   }
 }
